@@ -1,4 +1,7 @@
 #encoding: utf-8
+require 'digest/md5'
+require 'base64'
+
 module SuningPay
   class Service
     CURRENCY_CNY = 'CNY'

@@ -1,3 +1,8 @@
+require 'uri'
+require 'openssl'
+require 'digest/md5'
+require 'base64'
+
 require "suning_pay/version"
 require "suning_pay/rsa"
 require "suning_pay/service"
@@ -17,16 +22,19 @@ module SuningPay
       @api_base_url = url
     end
 
-    def api_suning_cert=(cert)
+    def api_suning_cert=(cert_path)
+      cert = File.read cert_path
       @api_suning_cert = OpenSSL::X509::Certificate.new(cert)
       @api_suning_public_key = @api_suning_cert.public_key
     end
 
-    def api_client_public_key=(key)
+    def api_client_public_key=(key_path)
+      key = File.read key_path
       @api_client_public_key = OpenSSL::PKey::RSA.new(key)
     end
 
-    def api_client_private_key=(key)
+    def api_client_private_key=(key_path)
+      key = File.read key_path
       @api_client_private_key = OpenSSL::PKey::RSA.new(key)
     end
 
