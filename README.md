@@ -19,6 +19,11 @@ And then execute:
 Or install it yourself as:
 
     $ gem install suning_pay
+    
+Add init file (suning_pay.rb) to Rails config/initializers
+
+    rake suning_pay:init:create
+    
 
 ## Usage
 
