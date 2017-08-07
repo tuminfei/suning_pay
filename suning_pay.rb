@@ -14,7 +14,12 @@ SuningPay.api_client_private_key = '/Users/terry/Documents/RUBY/hex/rsa_private_
 
 ##################PROD##################
 #SuningPay.api_base_url = 'https://ebankpay.suning.com/epps-ebpg/api/contract/'
+#SuningPay.api_query_base_url  = 'https://payment.suning.com/epps-pag/apiGateway/merchantOrder/'
+#SuningPay.api_tranfer_url = 'https://tag.yifubao.com/epps-twg/'
+
 #SuningPay.merchant_no = ''
 #SuningPay.api_suning_cert = ''
 #SuningPay.api_client_public_key = ''
 #SuningPay.api_client_private_key = ''
+
+#SuningPay.debug_mode = false
