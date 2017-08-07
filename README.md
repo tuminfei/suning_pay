@@ -33,7 +33,8 @@ Add init file (suning_pay.rb) to Rails config/initializers
 5. 支付订单请求(已签约)
 6. 支付订单查询接口
 7. 支持银行查询接口
-```ruby
+
+```
 SuningPay::Service.post_send_msg
 SuningPay::Service.post_validate_sign
 SuningPay::Service.post_sign
