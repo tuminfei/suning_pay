@@ -1,6 +1,8 @@
 ##################TEST##################
 #接口地址
 SuningPay.api_base_url = 'https://ebanksandbox.suning.com/epps-ebpg/api/contract/'
+SuningPay.api_query_base_url  = 'https://paymentsandbox.suning.com/epps-pag/apiGateway/merchantOrder/'
+SuningPay.api_tranfer_url = 'https://wagtestpre.suning.com/epps-twg/'
 #客户号
 SuningPay.merchant_no = '70057278'
 #Suning证书存放路径

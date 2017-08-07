@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8cf8def-5556-418a-b301-7917294a6f44" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/suning_pay/ent_service.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/suning_pay/util.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/suning_pay.rb" afterPath="$PROJECT_DIR$/lib/suning_pay.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/suning_pay/railtie.rb" afterPath="$PROJECT_DIR$/lib/suning_pay/railtie.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/suning_pay/rsa.rb" afterPath="$PROJECT_DIR$/lib/suning_pay/rsa.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/suning_pay/service.rb" afterPath="$PROJECT_DIR$/lib/suning_pay/service.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/suning_pay/version.rb" afterPath="$PROJECT_DIR$/lib/suning_pay/version.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/suning_pay.rb" afterPath="$PROJECT_DIR$/suning_pay.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,11 +23,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="suning_pay.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="suning_pay.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/suning_pay.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="753">
-              <caret line="57" column="64" lean-forward="false" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="64" />
+            <state relative-caret-position="166">
+              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -35,8 +36,8 @@
       <file leaf-file-name="suning_pay.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/suning_pay.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="86" lean-forward="false" selection-start-line="8" selection-start-column="86" selection-end-line="8" selection-end-column="86" />
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -52,11 +53,61 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="suning_pay.gemspec" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/suning_pay.gemspec">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="version.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/suning_pay/version.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="service.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/suning_pay/service.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+            <state relative-caret-position="253">
+              <caret line="57" column="60" lean-forward="false" selection-start-line="53" selection-start-column="6" selection-end-line="57" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ent_service.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/suning_pay/ent_service.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="46" column="46" lean-forward="false" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="railtie.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/suning_pay/railtie.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="util.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/suning_pay/util.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="676">
+              <caret line="57" column="39" lean-forward="false" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -87,12 +138,15 @@
         <option value="$PROJECT_DIR$/bin/suning_pay" />
         <option value="$PROJECT_DIR$/lib/rake/suning_pay.rake" />
         <option value="$PROJECT_DIR$/Rakefile" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/lib/suning_pay.rb" />
         <option value="$PROJECT_DIR$/lib/suning_pay/railtie.rb" />
         <option value="$PROJECT_DIR$/lib/suning_pay/rsa.rb" />
-        <option value="$PROJECT_DIR$/suning_pay.rb" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/lib/suning_pay/version.rb" />
         <option value="$PROJECT_DIR$/lib/suning_pay/service.rb" />
+        <option value="$PROJECT_DIR$/suning_pay.rb" />
+        <option value="$PROJECT_DIR$/lib/suning_pay.rb" />
+        <option value="$PROJECT_DIR$/lib/suning_pay/ent_service.rb" />
+        <option value="$PROJECT_DIR$/lib/suning_pay/util.rb" />
       </list>
     </option>
   </component>
@@ -103,8 +157,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1282" />
-    <option name="width" value="1278" />
+    <option name="x" value="1443" />
+    <option name="width" value="1117" />
     <option name="height" value="1440" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -186,6 +240,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/suning_pay" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -379,7 +438,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1501651114580</updated>
-      <workItem from="1501651115718" duration="27371000" />
+      <workItem from="1501651115718" duration="41981000" />
     </task>
     <task id="LOCAL-00001" summary="add params">
       <created>1501809137189</created>
@@ -416,16 +475,37 @@
       <option name="project" value="LOCAL" />
       <updated>1501826275790</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="doc">
+      <created>1502074354268</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1502074354268</updated>
+    </task>
+    <task id="LOCAL-00007" summary="doc">
+      <created>1502075708164</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1502075708164</updated>
+    </task>
+    <task id="LOCAL-00008" summary="doc">
+      <created>1502075922184</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1502075922184</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27371000" />
+    <option name="totallyTimeSpent" value="41981000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1282" y="0" width="1278" height="1440" extended-state="0" />
+    <frame x="1443" y="0" width="1117" height="1440" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5007825" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5729633" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="JSON Utils" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -488,14 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -539,14 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/suning_pay.gemspec">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/rake/suning_pay.rake">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -571,21 +635,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="367">
-            <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-            <folding />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/suning_pay/version.rb">
+    <entry file="file://$PROJECT_DIR$/suning_pay.gemspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
+        <state relative-caret-position="90">
+          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -598,10 +659,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/suning_pay.rb">
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs22/argument_error.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="86" lean-forward="false" selection-start-line="8" selection-start-column="86" selection-end-line="8" selection-end-column="86" />
+        <state relative-caret-position="360">
+          <caret line="24" column="6" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -614,18 +675,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/suning_pay/version.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/suning_pay/service.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+        <state relative-caret-position="253">
+          <caret line="57" column="60" lean-forward="false" selection-start-line="53" selection-start-column="6" selection-end-line="57" selection-end-column="60" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="630">
+            <caret line="42" column="44" lean-forward="false" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="44" />
+            <folding>
+              <marker date="1502075903000" expanded="true" signature="1176:2237" ph="for ... end" />
+              <marker date="1502075903000" expanded="true" signature="1453:2237" ph="for ... end" />
+              <marker date="1502075903000" expanded="true" signature="1733:2237" ph="for ... end" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/suning_pay.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="753">
-          <caret line="57" column="64" lean-forward="false" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="64" />
+        <state relative-caret-position="166">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/suning_pay/ent_service.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="46" column="46" lean-forward="false" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/suning_pay.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/suning_pay/util.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="57" column="39" lean-forward="false" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
           <folding />
         </state>
       </provider>

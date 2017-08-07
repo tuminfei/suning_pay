@@ -6,22 +6,37 @@ require 'base64'
 
 require "suning_pay/version"
 require "suning_pay/rsa"
+require "suning_pay/util"
 require "suning_pay/service"
+require "suning_pay/ent_service"
 require "suning_pay/railtie" if defined?(Rails)
 
 module SuningPay
   @client_options = {}
+  @ent_options = {}
   @debug_mode = true
   @public_key_index = '0001'
   @version = '1.0'
   @input_charset = 'UTF-8'
 
+  API_CODE_PAY = 'PAY'
+  API_CODE_TRANSFER = 'TRAN'
+  API_CODE_Q_PAY = 'Q_PAY'
+
   class<< self
     attr_accessor :merchant_no, :signature, :sign_algorithm, :submit_time, :debug_mode
-    attr_reader :api_base_url, :api_suning_cert, :api_suning_public_key, :api_client_public_key, :api_client_private_key
+    attr_reader :api_base_url, :api_query_base_url, :api_tranfer_url, :api_suning_cert, :api_suning_public_key, :api_client_public_key, :api_client_private_key
 
     def api_base_url=(url)
       @api_base_url = url
+    end
+
+    def api_query_base_url=(url)
+      @api_query_base_url = url
+    end
+
+    def api_tranfer_url=(url)
+      @api_tranfer_url = url
     end
 
     def api_suning_cert=(cert_path)
@@ -60,6 +75,16 @@ module SuningPay
 
       @client_options = options
       @client_options
+    end
+
+    def ent_options
+      options = {:merchantNo => @merchant_no,
+                 :publicKeyIndex => @public_key_index,
+                 :inputCharset => @input_charset
+      }
+
+      @ent_options = options
+      @ent_options
     end
   end
 end
