@@ -1,10 +1,8 @@
 #encoding: utf-8
-require 'digest/md5'
-require 'base64'
-
 module SuningPay
   class Service
     CURRENCY_CNY = 'CNY'
+    PAYTYPE_IM = '01'
 
     #1.签约请求_发送短信接口
     def self.post_send_msg(bank_code, card_type, card_info, tunnel_data=nil, options = {})
@@ -105,7 +103,7 @@ module SuningPay
 
     private
     #生成md5摘要信息
-    def get_summary(params)
+    def self.get_summary(params)
       #排序
       data_hash = sorted_hash(params)
       #拼接
@@ -120,7 +118,7 @@ module SuningPay
     end
 
     #生成带摘要签名的查询参数
-    def signature_param(prams, summary)
+    def self.signature_param(prams, summary)
       #私钥加密
       private_key = SuningPay.api_client_private_key
       sign = private_key.sign('sha1',summary.force_encoding("utf-8"))
@@ -132,11 +130,11 @@ module SuningPay
     end
 
     #排序
-    def sorted_hash(in_hash)
+    def self.sorted_hash(in_hash)
       return in_hash.sort{|a,b| a.to_s <=> b.to_s  }
     end
 
-    def send_post(func_name, func_params_hash)
+    def self.send_post(func_name, func_params_hash)
       #对params就行摘要并签名
       summary = get_summary(func_params_hash)
       #加签名的查询参数
