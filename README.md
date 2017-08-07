@@ -24,6 +24,24 @@ Add init file (suning_pay.rb) to Rails config/initializers
 
     rake suning_pay:init:create
     
+## API
+
+1. 签约请求_发送短信接口
+2. 签约请求_验证短信接口
+3. 签约请求接口(易付宝不发短信)
+4. 解约请求接口
+5. 支付订单请求(已签约)
+6. 支付订单查询接口
+7. 支持银行查询接口
+```ruby
+SuningPay::Service.post_send_msg
+SuningPay::Service.post_validate_sign
+SuningPay::Service.post_sign
+SuningPay::Service.post_cancel
+SuningPay::Service.post_pay
+SuningPay::Service.post_query_merchant_order
+SuningPay::Service.post_query_channel
+```
 
 ## Usage
 
