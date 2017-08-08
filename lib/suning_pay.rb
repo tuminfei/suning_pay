@@ -22,10 +22,12 @@ module SuningPay
   API_CODE_PAY = 'PAY'
   API_CODE_TRANSFER = 'TRAN'
   API_CODE_Q_PAY = 'Q_PAY'
+  API_CODE_TRANSFER_CARD = 'TRAN_C'
 
   class<< self
     attr_accessor :merchant_no, :signature, :sign_algorithm, :submit_time, :debug_mode
-    attr_reader :api_base_url, :api_query_base_url, :api_tranfer_url, :api_suning_cert, :api_suning_public_key, :api_client_public_key, :api_client_private_key
+    attr_reader :api_base_url, :api_query_base_url, :api_tranfer_url, :api_card_tranfer_url
+    attr_reader :api_suning_cert, :api_suning_public_key, :api_client_public_key, :api_client_private_key
 
     def api_base_url=(url)
       @api_base_url = url
@@ -37,6 +39,10 @@ module SuningPay
 
     def api_tranfer_url=(url)
       @api_tranfer_url = url
+    end
+
+    def api_card_tranfer_url=(url)
+      @api_card_tranfer_url = url
     end
 
     def api_suning_cert=(cert_path)

@@ -1,4 +1,6 @@
 #encoding: utf-8
+require 'json/ext'
+
 module SuningPay
   class EntService
     CURRENCY_CNY = 'CNY'
@@ -27,6 +29,7 @@ module SuningPay
       total_num = batch_list.size
       total_amount = 0
       batch_list.each {|x| total_amount += x[4]}
+      raise ArgumentError, "Argument batch_list total_amount limit 100000000000 yuan" if total_amount > 10000000000000
 
       batch_list.each do |tran|
         detail_line = {
@@ -51,16 +54,16 @@ module SuningPay
           :totalAmount => total_amount,
           :currency => SuningPay::EntService::CURRENCY_CNY,
           :chargeMode => charge_mode,
-          :payDate => Time.now.strftime("%Y%m%d%"),
+          :payDate => Time.now.strftime("%Y%m%d"),
           :tunnelData => tunnel_data,
-          :detailData => detail_data.to_s,
+          :detailData => detail_data,
           :goodsType => goods_type,
           :batchOrderName => batch_order_name,
           :notifyUrl => notify_url
       }
 
       input_hash = {:merchantNo => SuningPay.merchant_no,
-                    :body => body.to_s}
+                    :body => body.to_json.to_s.gsub("\\", '')}
       post_params = SuningPay.ent_options.merge(options).merge(input_hash)
 
       #调用查询接口
@@ -87,6 +90,8 @@ module SuningPay
       total_num = batch_list.size
       total_amount = 0
       batch_list.each {|x| total_amount += x[10]}
+      raise ArgumentError, "Argument batch_list total_amount limit 100000000000 yuan" if total_amount > 10000000000000
+
       batch_list.each do |tran|
         detail_line = {
             "serialNo" => tran[0],
@@ -114,20 +119,20 @@ module SuningPay
           :totalAmount => total_amount,
           :currency => SuningPay::EntService::CURRENCY_CNY,
           :chargeMode => charge_mode,
-          :payDate => Time.now.strftime("%Y%m%d%"),
+          :payDate => Time.now.strftime("%Y%m%d"),
           :tunnelData => tunnel_data,
-          :detailData => detail_data.to_s,
+          :detailData => detail_data,
           :goodsType => goods_type,
           :batchOrderName => batch_order_name,
           :notifyUrl => notify_url
       }
 
       input_hash = {:merchantNo => SuningPay.merchant_no,
-                    :body => body.to_s}
+                    :body => body.to_json.to_s.gsub("\\", '')}
       post_params = SuningPay.ent_options.merge(options).merge(input_hash)
 
       #调用查询接口
-      msg = SuningPay::Util.send_post('withdraw.htm', post_params, SuningPay::API_CODE_TRANSFER)
+      msg = SuningPay::Util.send_post('withdraw.htm', post_params, SuningPay::API_CODE_TRANSFER_CARD)
       msg
     end
 
@@ -151,7 +156,7 @@ module SuningPay
       post_params = SuningPay.ent_options.merge(options).merge(input_hash)
 
       #调用查询接口
-      msg = SuningPay::Util.send_post('withdrawQuery.htm', post_params, SuningPay::API_CODE_TRANSFER)
+      msg = SuningPay::Util.send_post('withdrawQuery.htm', post_params, SuningPay::API_CODE_TRANSFER_CARD)
       msg
     end
 

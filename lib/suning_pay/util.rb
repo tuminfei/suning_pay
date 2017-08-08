@@ -46,6 +46,8 @@ module SuningPay
           api_url = SuningPay.api_query_base_url + func_name
         when SuningPay::API_CODE_TRANSFER
           api_url = SuningPay.api_tranfer_url + func_name
+        when SuningPay::API_CODE_TRANSFER_CARD
+          api_url = SuningPay.api_card_tranfer_url + func_name
         else
           api_url = SuningPay.api_base_url + func_name
       end
