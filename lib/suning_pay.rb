@@ -46,7 +46,7 @@ module SuningPay
     end
 
     def api_suning_cert=(cert_path)
-      unless cert_path.blank?
+      unless cert_path.nil?
         cert = File.read cert_path
         @api_suning_cert = OpenSSL::X509::Certificate.new(cert)
         @api_suning_public_key = @api_suning_cert.public_key
@@ -54,14 +54,14 @@ module SuningPay
     end
 
     def api_client_public_key=(key_path)
-      unless key_path.blank?
+      unless key_path.nil?
         key = File.read key_path
         @api_client_public_key = OpenSSL::PKey::RSA.new(key)
       end
     end
 
     def api_client_private_key=(key_path)
-      unless key_path.blank?
+      unless key_path.nil?
         key = File.read key_path
         @api_client_private_key = OpenSSL::PKey::RSA.new(key)
       end
