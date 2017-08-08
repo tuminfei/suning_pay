@@ -111,21 +111,21 @@ module SuningPay
         detail_data << detail_line
       end
       #body参数
-      body = {
-          :batchNo => batch_no,
-          :merchantNo => SuningPay.merchant_no,
-          :productCode => product_code,
-          :totalNum => total_num,
-          :totalAmount => total_amount,
-          :currency => SuningPay::EntService::CURRENCY_CNY,
-          :chargeMode => charge_mode,
-          :payDate => Time.now.strftime("%Y%m%d"),
-          :tunnelData => tunnel_data,
-          :detailData => detail_data,
-          :goodsType => goods_type,
-          :batchOrderName => batch_order_name,
-          :notifyUrl => notify_url
-      }
+      body =[{
+                 :batchNo => batch_no,
+                 :merchantNo => SuningPay.merchant_no,
+                 :productCode => product_code,
+                 :totalNum => total_num,
+                 :totalAmount => total_amount,
+                 :currency => SuningPay::EntService::CURRENCY_CNY,
+                 :chargeMode => charge_mode,
+                 :payDate => Time.now.strftime("%Y%m%d"),
+                 :tunnelData => tunnel_data,
+                 :detailData => detail_data,
+                 :goodsType => goods_type,
+                 :batchOrderName => batch_order_name,
+                 :notifyUrl => notify_url
+             }]
 
       input_hash = {:merchantNo => SuningPay.merchant_no,
                     :body => body.to_json.to_s.gsub("\\", '')}

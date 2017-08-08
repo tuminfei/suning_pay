@@ -1,7 +1,7 @@
 require "bundler/gem_tasks"
 require "rake/testtask"
 
-import "./lib/tasks/suning_pay.rake"
+import "./lib/rake/suning_pay.rake"
 
 Rake::TestTask.new(:test) do |t|
   t.libs << "test"
