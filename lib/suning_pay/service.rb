@@ -5,7 +5,7 @@ module SuningPay
     PAYTYPE_IM = '01'
 
     #1.签约请求_发送短信接口
-    def self.post_send_msg(bank_code, card_type, card_info, tunnel_data=nil, options = {})
+    def self.post_send_msg(bank_code, card_type, card_info, tunnel_data = '', options = {})
       #加密cardinfo
       suning_pub_key = SuningPay.api_suning_public_key
       encr_msg = SuningPay::RSA.encrypt_msg(suning_pub_key, card_info)
@@ -22,7 +22,7 @@ module SuningPay
     end
 
     #2.签约请求_验证短信接口
-    def self.post_validate_sign(smg_code, serial_no, tunnel_data=nil, options = {})
+    def self.post_validate_sign(smg_code, serial_no, tunnel_data = '', options = {})
       input_hash = {:smgCode => smg_code,
                     :serialNo => serial_no,
                     :tunnelData => Base64.urlsafe_encode64(tunnel_data)}
@@ -33,7 +33,7 @@ module SuningPay
     end
 
     #3.签约请求接口(易付宝不发短信)
-    def self.post_sign(bank_code, card_type, card_info, tunnel_data=nil, options = {})
+    def self.post_sign(bank_code, card_type, card_info, tunnel_data = '', options = {})
       #加密cardinfo
       suning_pub_key = SuningPay.api_suning_public_key
       encr_msg = SuningPay::RSA.encrypt_msg(suning_pub_key, card_info)
@@ -50,7 +50,7 @@ module SuningPay
     end
 
     #4.解约请求接口
-    def self.post_cancel(contract_no, tunnel_data=nil, options = {})
+    def self.post_cancel(contract_no, tunnel_data = '', options = {})
       input_hash = {:contractNo => contract_no,
                     :tunnelData => Base64.urlsafe_encode64(tunnel_data)}
       post_params = SuningPay.client_options.merge(options).merge(input_hash)
@@ -60,7 +60,7 @@ module SuningPay
     end
 
     #5.支付订单请求
-    def self.post_pay(contract_no, out_order_no, order_type, order_amount, order_time, saler_merchant_no, goods_type, goods_name, pay_timeout, remark, tunnel_data=nil, options = {})
+    def self.post_pay(contract_no, out_order_no, order_type, order_amount, order_time, saler_merchant_no, goods_type, goods_name, pay_timeout, remark, tunnel_data = '', options = {})
       input_hash = {:contractNo => contract_no,
                     :outOrderNo => out_order_no,
                     :orderType => order_type,

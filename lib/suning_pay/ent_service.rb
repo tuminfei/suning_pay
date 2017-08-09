@@ -17,7 +17,7 @@ module SuningPay
     #   [转账流水号2, 收款方易付宝登录名, 收款方商户号, 收款方姓名, 转账金额, 收款方类型, 备注信息, 订单名称],
     #   ..
     # ]
-    def self.post_transfer_acquire(batch_no, product_code, charge_mode, goods_type, batch_order_name, batch_list = [], notify_url = nil, tunnel_data = nil, options = {})
+    def self.post_transfer_acquire(batch_no, product_code, charge_mode, goods_type, batch_order_name, batch_list = [], notify_url = '', tunnel_data = '', options = {})
 
       raise ArgumentError, "Argument batch_list error" if batch_list.nil? or batch_list.empty?
 
@@ -78,7 +78,7 @@ module SuningPay
     #   [流水号2, 收款方卡号, 收款方户名, 收款方类型, 收款方币种, 开户行名称, 开户行编号, 开户行省, 开户行市, 联行号, 付款金额, 备注, 订单名称],
     #   ..
     # ]
-    def self.post_withdraw(batch_no, product_code, charge_mode, goods_type, batch_order_name, batch_list = [], notify_url = nil, tunnel_data = nil, options = {})
+    def self.post_withdraw(batch_no, product_code, charge_mode, goods_type, batch_order_name, batch_list = [], notify_url = '', tunnel_data = '', options = {})
 
       raise ArgumentError, "Argument batch_list error" if batch_list.nil? or batch_list.empty?
 
