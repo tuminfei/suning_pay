@@ -67,7 +67,7 @@ SuningPay.api_client_private_key = '/Users/terry/Documents/RUBY/hex/rsa_private_
 6. 支付订单查询接口
 7. 支持银行查询接口
 
-```
+```ruby
 SuningPay::Service.post_send_msg
 SuningPay::Service.post_validate_sign
 SuningPay::Service.post_sign
@@ -84,7 +84,7 @@ SuningPay::Service.post_query_channel
 3. 转账批次查询接口
 4. 出款批次查询接口
 
-```
+```ruby
 SuningPay::EntService.post_transfer_acquire
 SuningPay::EntService.post_withdraw
 SuningPay::EntService.post_transfer_query
