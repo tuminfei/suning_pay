@@ -3,6 +3,8 @@ require 'logger'
 
 module SuningPay
   class Util
+    DEFAULT_ERR_MSG = '{"responseMsg":"系统处理异常，请稍后查询","responseCode":"9999"}'
+
     #生成md5摘要信息
     def self.get_summary(params)
       #排序
@@ -67,7 +69,12 @@ module SuningPay
 
       response = conn.post '', func_params
       html_response = response.body
-      html_response
+      begin
+        msg = JSON.parse(html_response)
+      rescue JSON::ParserError => e
+        msg = JSON.parse(DEFAULT_ERR_MSG)
+      end
+      msg
     end
   end
 end

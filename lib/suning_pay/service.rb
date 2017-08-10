@@ -46,7 +46,7 @@ module SuningPay
       post_params = SuningPay.client_options.merge(options).merge(input_hash)
       #调用查询接口
       msg = SuningPay::Util.send_post('sign', post_params)
-
+      msg
     end
 
     #4.解约请求接口
