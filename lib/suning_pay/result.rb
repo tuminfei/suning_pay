@@ -66,7 +66,7 @@ module SuningPay
       super nil
       self[:raw] = result
 
-      if result.class == JSON
+      if result.class == Hash
         result.each do |k, v|
           self[k] = v
         end
