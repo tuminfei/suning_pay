@@ -5,6 +5,7 @@ require 'digest/md5'
 require 'base64'
 
 require "suning_pay/version"
+require "suning_pay/result"
 require "suning_pay/rsa"
 require "suning_pay/util"
 require "suning_pay/service"
