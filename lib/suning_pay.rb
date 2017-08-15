@@ -27,7 +27,7 @@ module SuningPay
   API_CODE_Q_PAY = 'Q_PAY'
   API_CODE_TRANSFER_CARD = 'TRAN_C'
 
-  API_ENT_NOTICE_URL = '/api/suning_pay/notify'
+  API_ENT_POST_NOTICE_URL = '/api/suning_pay/notify'
 
   class<< self
     attr_accessor :merchant_no, :signature, :sign_algorithm, :submit_time, :debug_mode
