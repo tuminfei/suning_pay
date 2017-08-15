@@ -1,8 +1,6 @@
 # SuningPay
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/suning_pay`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+SuningPay(易付宝) API
 
 ## Installation
 
@@ -24,7 +22,7 @@ Add init file (suning_pay.rb) to Rails config/initializers
 
     rake suning_pay:init:create
     
-configuration
+Configuration
 
 ```ruby
 ##################TEST##################
@@ -56,6 +54,12 @@ SuningPay.api_client_private_key = '/Users/terry/Documents/RUBY/hex/rsa_private_
 
 #SuningPay.debug_mode = false
 ```
+
+Add Migration
+```ruby
+rails g suning_pay:migration
+```
+
     
 ## API-委托代收
 
