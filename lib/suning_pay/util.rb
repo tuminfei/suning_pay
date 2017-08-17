@@ -58,17 +58,19 @@ module SuningPay
       summary = get_summary(func_params_hash)
       #加签名的查询参数
       func_params = signature_param(func_params_hash, summary)
+      conn = Faraday.new(:url => api_url)
+
+      response = conn.post '', func_params
+      html_response = response.body
+
       if SuningPay.debug_mode
         logger = Logger.new('suning_pay.log')
         logger.info('--------------SUNING PAY DEBUG--------------')
         logger.info("URL:#{api_url.to_s}")
         logger.info("PARAMS:#{func_params.to_s}")
+        logger.info("RESPONSE:#{html_response.to_s}")
       end
 
-      conn = Faraday.new(:url => api_url)
-
-      response = conn.post '', func_params
-      html_response = response.body
       begin
         msg = JSON.parse(html_response)
       rescue JSON::ParserError => e
