@@ -71,7 +71,7 @@ module SuningPay
                     :goodsType => goods_type,
                     :goodsName => Base64.urlsafe_encode64(goods_name),
                     :payTimeout => pay_timeout,
-                    :remark => remark,
+                    :remark => Base64.urlsafe_encode64(remark),
                     :tunnelData => Base64.urlsafe_encode64(tunnel_data)}
 
       post_params = SuningPay.client_options.merge(options).merge(input_hash)
