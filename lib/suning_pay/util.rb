@@ -68,7 +68,7 @@ module SuningPay
         logger.info('--------------SUNING PAY DEBUG--------------')
         logger.info("URL:#{api_url.to_s}")
         logger.info("PARAMS:#{func_params.to_s}")
-        logger.info("RESPONSE:#{html_response.to_s}")
+        logger.info("RESPONSE:#{html_response.force_encoding('UTF-8')}")
       end
 
       begin
