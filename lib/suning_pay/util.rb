@@ -64,7 +64,8 @@ module SuningPay
       html_response = response.body
 
       if SuningPay.debug_mode
-        logger = Logger.new('suning_pay.log')
+        log_file = File.join(Rails.root, "log", "suning_pay.log")
+        logger = Logger.new(log_file)
         logger.info('--------------SUNING PAY DEBUG--------------')
         logger.info("URL:#{api_url.to_s}")
         logger.info("PARAMS:#{func_params.to_s}")
