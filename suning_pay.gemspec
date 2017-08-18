@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Suning Pay 1.1.2 doc.}
   spec.description   = %q{Suning Pay 1.1.2 doc.}
-  spec.homepage      = "https://gitee.com/tarzansos/suning_pay"
+  spec.homepage      = "https://github.com/tuminfei/suning_pay"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
