@@ -2,6 +2,10 @@
 module SuningPay
   class Result < ::Hash
     RESULT_SUCCESS_FLAG = '0000'
+    RESULT_ERR_FLAG = '9999'
+    PAY_SUCCESS_FLAG = 'S'
+    PAY_FAILURE_FLAG = 'F'
+    PAY_PADDING_FLAG = 'P'
 
     RESULT_MSG = {
         '0000' => '成功',
@@ -83,6 +87,10 @@ module SuningPay
 
     def success?
       self['responseCode'] == RESULT_SUCCESS_FLAG
+    end
+
+    def pay_success?
+      self['responseCode'] == RESULT_SUCCESS_FLAG and self['payResult'] == PAY_SUCCESS_FLAG
     end
   end
 end
