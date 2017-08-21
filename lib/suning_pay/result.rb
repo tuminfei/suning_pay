@@ -5,7 +5,8 @@ module SuningPay
     RESULT_ERR_FLAG = '9999'
     PAY_SUCCESS_FLAG = 'S'
     PAY_FAILURE_FLAG = 'F'
-    PAY_PADDING_FLAG = 'P'
+    PAY_PENDING_FLAG = 'P'
+    PAY_CLOSE_FLAG = 'C'
 
     RESULT_MSG = {
         '0000' => '成功',
@@ -91,6 +92,18 @@ module SuningPay
 
     def pay_success?
       self['responseCode'] == RESULT_SUCCESS_FLAG and self['payResult'] == PAY_SUCCESS_FLAG
+    end
+
+    def pay_fail?
+      self['responseCode'] == RESULT_SUCCESS_FLAG and self['payResult'] == PAY_FAILURE_FLAG
+    end
+
+    def order_success?
+      self['responseCode'] == RESULT_SUCCESS_FLAG and self['orderStatus'] == PAY_SUCCESS_FLAG
+    end
+
+    def order_close?
+      self['responseCode'] == RESULT_SUCCESS_FLAG and self['orderStatus'] == PAY_CLOSE_FLAG
     end
   end
 end

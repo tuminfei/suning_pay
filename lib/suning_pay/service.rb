@@ -59,8 +59,8 @@ module SuningPay
       msg
     end
 
-    #5.支付订单请求
-    def self.post_pay(contract_no, out_order_no, order_type, order_amount, order_time, saler_merchant_no, goods_type, goods_name, pay_timeout, remark, tunnel_data = '', options = {})
+    #5.支付订单请求(默认使用2.0版本)
+    def self.post_pay(contract_no, out_order_no, order_type, order_amount, order_time, saler_merchant_no, goods_type, goods_name, pay_timeout, remark, tunnel_data = '', options = {:version => '2.0'})
       input_hash = {:contractNo => contract_no,
                     :outOrderNo => out_order_no,
                     :orderType => order_type,
@@ -81,7 +81,7 @@ module SuningPay
     end
 
     #6.支付订单查询接口
-    def self.post_query_merchant_order(out_order_no, order_time, options = {})
+    def self.post_query_merchant_order(out_order_no, order_time, options = {:version => '1.2'})
       input_hash = {:outOrderNo => out_order_no,
                     :orderTime => order_time}
 
