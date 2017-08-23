@@ -95,7 +95,7 @@ SuningPay::EntService.post_transfer_query
 SuningPay::EntService.post_withdraw_query
 ```
 
-##Notice_API
+## Notice_API
 ```ruby
 rails g suning_pay:migration
 ```
